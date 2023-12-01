@@ -1,0 +1,15 @@
+
+.Links{
+    font-size: 25px;
+    margin: 5px;
+}
+
+.Link{
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+}
+.Link:hover{
+    text-decoration: underline;
+    color: darkblue;
+}
