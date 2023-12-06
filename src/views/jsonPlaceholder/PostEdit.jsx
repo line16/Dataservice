@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from "react";
 import useRequestData from "../../hooks/useRequestData";
 import { useParams } from "react-router-dom";
+import Loader from "../../components/Loader";
 
 const PostEdit = () => {
 
@@ -21,10 +22,10 @@ const PostEdit = () => {
 
   useEffect(() => {
     
-  }, [third])
+  }, [])
   
   
-
+// DER ER KLIKKET PÅ SUBMIT - SEND DATA TIL API
   const handleSubmit = (e) => {
     e.preventDefault(); //VIGTIG
 
@@ -71,7 +72,7 @@ const PostEdit = () => {
           value={userID}
         />
 
-        <button type="submit">opret min post</button>
+        <button type="submit">Done</button>
       </form>
     </div>
   );

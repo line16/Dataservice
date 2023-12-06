@@ -3,74 +3,81 @@ import Loader from "../../components/Loader";
 import { useEffect } from "react";
 import useRequestData from "../../hooks/useRequestData";
 import { Link } from "react-router-dom";
+// imported icons fra react-icons (npm i react-icons)
+import { FaUserEdit } from "react-icons/fa";
+import { IoTrashBin } from "react-icons/io5";
+import { MdAdd } from "react-icons/md";
 
 const PostsAdmin = () => {
-
   const { data, isLoading, error, makeRequest } = useRequestData();
 
-  const {data: dataDelete, isLoading: isLoadingDelete, error: errorDelete, makeRequest: makeRequestDelete} = useRequestData();
+  const {
+    data: dataDelete,
+    isLoading: isLoadingDelete,
+    error: errorDelete,
+    makeRequest: makeRequestDelete,
+  } = useRequestData();
 
   useEffect(() => {
-
-    makeRequest("https://jsonplaceholder.typicode.com/posts")
-
+    makeRequest("https://jsonplaceholder.typicode.com/posts");
   }, []);
 
-  const handleDelete = (postID, postTitle) =>{
-
+  const handleDelete = (postID, postTitle) => {
     if (window.confirm("du sletter" + postTitle)) {
-
-      makeRequestDelete("https://jsonplaceholder.typicode.com/posts" + postID, "DELETE")
+      makeRequestDelete(
+        "https://jsonplaceholder.typicode.com/posts" + postID,
+        "DELETE"
+      );
     }
-    
-  }
+  };
 
   return (
-    <div className="AllGrid">
+    <div className={"container mx-auto px-4"}>
       <h1>jsonPlaceholder admin posts</h1>
 
       {isLoading && <Loader />}
       {error && <h2> error</h2>}
 
-
-    <table>
-
-    <tr>
-        <th>ID</th>
-        <th>Title</th>
-        <th>RET</th>
-        <th>SLET</th>
-    </tr>
-
+      <table className={"table table-zebra"}>
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>
+              <Link to={"/PostsCreate"}>
+                <MdAdd size="2em"/>
+              </Link>
+            </th>
+          </tr>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>RET</th>
+            <th>SLET</th>
+          </tr>
+        </thead>
         <tbody>
-
-        <div>
-        {data &&
-          data.map((p) => (
-
-            <tr key={p.id}>
-            <th>{p.id}</th>
-            <th>{p.title}</th>
-            <th><Link to={"/post/" + p.id}>RET</Link></th>
-            <th onClick={() => handleDelete(p.id, p.title)}>SLET</th>
-        </tr>
-
-            // <div className="card">
-            //   <h2 className="text-xl font-bold">{p.title}</h2>
-            //   <p>{p.body}</p>
-            //   <p>{p.id}</p>
-            // </div>
-          ))}
-            </div>
-
+          {data &&
+            data.map((p) => (
+              <tr key={p.id}>
+                <td>{p.id}</td>
+                <td>{p.title}</td>
+                <td>
+                  <Link to={"/PostEdit/" + p.id}>
+                    <FaUserEdit size="2em" />
+                  </Link>
+                </td>
+                <td>
+                  <button className="btn" onClick={() => handleDelete(p.id, p.title)}>
+                    <IoTrashBin size="2em" />
+                  </button>
+                </td>
+              </tr>
+            ))}
         </tbody>
-
-    
-
-    </table>
-
+      </table>
     </div>
-
   );
 };
 

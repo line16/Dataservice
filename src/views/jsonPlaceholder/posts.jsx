@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import useRequestData from "../../hooks/useRequestData";
 import Loader from "../../components/Loader";
+import PrevNext from "../../components/PrevNext";
 
 const Posts = () => {
   const  { data, isLoading, error, makeRequest } = useRequestData();
@@ -37,20 +38,9 @@ const Posts = () => {
 
 {data && (
   <>
-    <button
-      className="btn"
-      onClick={() => setCurrentPage(currentPage - 1)}
-      disabled={currentPage <= 0}
-    >
-      Prev
-    </button>
-    <button
-      className="btn"
-      onClick={() => setCurrentPage(currentPage + 1)}
-      disabled={currentPage + 1 >= Math.ceil(data.length / itemsPerPage)}
-    >
-      Next
-    </button>
+
+  <PrevNext setCurrentPage={setCurrentPage} currentPage={currentPage} dataLength={data.Length} itemsPerPage={itemsPerPage}/>
+
   </>
 )}
 

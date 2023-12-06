@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import useRequestData from "../../hooks/useRequestData";
 import Loader from "../../components/Loader";
-import nextprev from "../../components/nextPrev";
+import PrevNext from "../../components/PrevNext";
 
 const PostsPhoto = () => {
   const { data, isLoading, error, makeRequest } = useRequestData();
@@ -33,21 +33,8 @@ const PostsPhoto = () => {
       {data && (
 
   <>
-    <nextprev 
-     setCurrentPage={setCurrentPage}
-     currentPage={currentPage} 
-     dataLength={data.length} 
-     itemsPerPage={itemsPerPage}/>
+  <PrevNext setCurrentPage={setCurrentPage} currentPage={currentPage} dataLength={data.Length} itemsPerPage={itemsPerPage}/>
 
-    <button
-      className="btn"
-      onClick={() => setCurrentPage(currentPage - 1)}
-      disabled={currentPage <= 0}>Prev</button>
-
-    <button
-      className="btn"
-      onClick={() => setCurrentPage(currentPage + 1)}
-      disabled={currentPage + 1 >= Math.ceil(data.length / itemsPerPage)}>Next</button>
   </>
 )}
 
