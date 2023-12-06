@@ -5,6 +5,9 @@ import Loader from "../../components/Loader";
 
 const Todo = () => {
 
+  const  { data, isLoading, error, makeRequest } = useRequestData();
+  
+
     useEffect(() => {
         makeRequest("https://jsonplaceholder.typicode.com/todos");
       }, []);
@@ -17,8 +20,11 @@ const Todo = () => {
       {error && <h2> error</h2>}
 
       <div>
-        {data &&
-          data.map((p) => (
+        {data && data
+        .filter(
+          t => t.complete === isComplete
+        )
+          .map((p) => (
             <div className="card">
               <h2 className="text-xl font-bold">{p.title}</h2>
               <p>{p.body}</p>

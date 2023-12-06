@@ -7,6 +7,7 @@
 
 body{
   background-color: lightblue;
+  align-items: center;
 }
 
 button{
@@ -57,4 +58,11 @@ button:hover{
 
 .read-the-docs {
   color: #888;
+}
+
+.AllGrid{
+  width: fit-content;
+  height: auto;
+  justify-content: center;
+  align-items: center;
 }

@@ -36,6 +36,9 @@ const Navbar = () => {
                     <NavLink className="Link" to="/todo">
                         TODO
                     </NavLink>
+                    <NavLink className="Link" to="/postAdmin">
+                        postAdmin
+                    </NavLink>
                     {/* SWAPI */}
                     <NavLink className="Link" to="/starships">
                         starships

@@ -13,7 +13,10 @@ import News from './views/News';
 import Posts from './views/jsonPlaceholder/posts';
 import PostsPhoto from './views/jsonPlaceholder/PostsPhoto';
 import Todo from './views/jsonPlaceholder/JsonTODO';
-import Star from './Starships/starships';
+import Star from './views/Starships/starships';
+import PostsAdmin from './views/jsonPlaceholder/PostsAdmin';
+import PostEdit from './views/jsonPlaceholder/PostEdit';
+import NewsApi from "./views/NewsApi/Everything"
 
 function App () {
 
@@ -31,9 +34,12 @@ function App () {
           <Route path="posts" element={ <Posts /> } />
           <Route path="photo" element={ <PostsPhoto /> } />
           <Route path="todo" element={ <Todo /> } />
+          <Route path="postAdmin" element={ <PostsAdmin /> } />
+          <Route path="postedit/:postID" element={ <PostEdit /> } />
           {/* SWAPI */}
           <Route path="star" element={ <Star /> } />
-
+          {/* NEWS API */}
+          <Route path="NewsApi" element={ <NewsApi /> } />
           <Route path="news" element={ <News /> } />
           <Route path="login" element={ <Login /> } />
           <Route path="*" element={ <NoMatch /> } />
