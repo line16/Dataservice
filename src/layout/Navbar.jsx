@@ -20,8 +20,8 @@ const Navbar = () => {
                     <NavLink className="Link" to="/about">
                         Om os
                     </NavLink>
-                    <NavLink className="Link" to="/news">
-                        Nyheder
+                    <NavLink className="Link" to="/NewsHeadlines">
+                        NewsAPi TopHeadlines
                     </NavLink>
                     <NavLink className="Link" to="/contact">
                         Kontakt

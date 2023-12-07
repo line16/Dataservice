@@ -18,6 +18,7 @@ import PostsAdmin from './views/jsonPlaceholder/PostsAdmin';
 import PostEdit from './views/jsonPlaceholder/PostEdit';
 import NewsApi from "./views/NewsApi/Everything";
 import PostsCreate from './views/jsonPlaceholder/PostsCreate';
+import TopHeadlines from './views/NewsApi/TopHeadlines';
 
 
 function App () {
@@ -44,6 +45,7 @@ function App () {
           <Route path="star" element={ <Star /> } />
           {/* NEWS API */}
           <Route path="NewsApi" element={ <NewsApi /> } />
+          <Route path="NewsHeadlines" element={ <TopHeadlines /> } />
           
           <Route path="news" element={ <News /> } />
           <Route path="login" element={ <Login /> } />
