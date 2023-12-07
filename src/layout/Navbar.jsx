@@ -43,6 +43,10 @@ const Navbar = () => {
                     <NavLink className="Link" to="/starships">
                         starships
                     </NavLink>
+                    {/* NEWSAPI */}
+                    <NavLink className="Link" to="/NewsApi">
+                        NewsAPI
+                    </NavLink>
                     {/* ADMIN */}
                     <NavLink className="Link" to="/admin">
                         ADMIN

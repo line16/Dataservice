@@ -38,7 +38,7 @@ const PostsAdmin = () => {
       {isLoading && <Loader />}
       {error && <h2> error</h2>}
 
-      <table className={"table table-zebra"}>
+      <table className="table table-zebra">
         <thead>
           <tr>
             <th></th>
