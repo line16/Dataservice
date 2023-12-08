@@ -32,13 +32,13 @@ const PostsAdmin = () => {
   };
 
   return (
-    <div className={"container mx-auto px-4"}>
+    <div className={"overflow-x-auto"}>
       <h1>jsonPlaceholder admin posts</h1>
 
       {isLoading && <Loader />}
       {error && <h2> error</h2>}
 
-      <table className="table table-zebra">
+      <table className="table text-black">
         <thead>
           <tr>
             <th></th>
@@ -69,7 +69,7 @@ const PostsAdmin = () => {
                   </Link>
                 </td>
                 <td>
-                  <button className="btn" onClick={() => handleDelete(p.id, p.title)}>
+                  <button className="btn btn-neutral" onClick={() => handleDelete(p.id, p.title)}>
                     <IoTrashBin size="2em" />
                   </button>
                 </td>

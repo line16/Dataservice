@@ -16,9 +16,10 @@ import Todo from './views/jsonPlaceholder/JsonTODO';
 import Star from './views/Starships/starships';
 import PostsAdmin from './views/jsonPlaceholder/PostsAdmin';
 import PostEdit from './views/jsonPlaceholder/PostEdit';
-import NewsApi from "./views/NewsApi/Everything";
 import PostsCreate from './views/jsonPlaceholder/PostsCreate';
 import TopHeadlines from './views/NewsApi/TopHeadlines';
+import NewsApi from "./views/NewsApi/Everything";
+import Hobbies from './views/RapidApi/hobbies';
 
 
 function App () {
@@ -46,6 +47,8 @@ function App () {
           {/* NEWS API */}
           <Route path="NewsApi" element={ <NewsApi /> } />
           <Route path="NewsHeadlines" element={ <TopHeadlines /> } />
+          {/* RAPIDAPI */}
+          <Route path="hobbies" element={ <Hobbies /> } />
           
           <Route path="news" element={ <News /> } />
           <Route path="login" element={ <Login /> } />

@@ -7,7 +7,7 @@
 .Link{
     margin: 5px;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .Link:hover{
     text-decoration: underline;

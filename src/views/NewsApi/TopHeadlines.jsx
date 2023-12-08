@@ -85,7 +85,7 @@ const [country, setcountry] = useState("jp")
             <p>{n.content}</p>
 
             <div className="card-actions justify-end">
-              <button className="btn btn-primary"></button>
+              <button className="btn btn-wide"></button>
             </div>
           </div>
         ))}

@@ -7,8 +7,8 @@ const Navbar = () => {
     return (
 
 
-        <nav>
-            <div>
+        <nav className='navbar text-white'>
+            <div className='navbar-start'>
                 <div>
                     <a href="#">LOGO A/S</a>
                 </div>
@@ -20,6 +20,7 @@ const Navbar = () => {
                     <NavLink className="Link" to="/about">
                         Om os
                     </NavLink>
+                    {/* NEWS API */}
                     <NavLink className="Link" to="/NewsHeadlines">
                         NewsAPi TopHeadlines
                     </NavLink>
@@ -46,6 +47,10 @@ const Navbar = () => {
                     {/* NEWSAPI */}
                     <NavLink className="Link" to="/NewsApi">
                         NewsAPI
+                    </NavLink>
+                    {/* RAPIDAPI */}
+                    <NavLink className="Link" to="/Hobbies">
+                        Hobbies
                     </NavLink>
                     {/* ADMIN */}
                     <NavLink className="Link" to="/admin">

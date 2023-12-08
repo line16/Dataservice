@@ -33,7 +33,7 @@ const Everything = () => {
 
   return (
     <div className="container">
-      <h1 className="text-3xl font-bold underline">NEWSAPI - Everything </h1>
+      <h1 className="text-3xl font-bold underline px-3">NEWSAPI - Everything </h1>
       {/* loading and error */}
       {isLoading && <Loader />}
       {error && <h2> error</h2>}
@@ -57,18 +57,18 @@ const Everything = () => {
       {data &&
         data.articles.map((n) => (
           <div
-            className="card card-compact w-96 bg-base-100 shadow-xl"
+          className="card card-body justify-center"
             key={n.url}
           >
-            <figure>
-              <img src={n.urlToImage} alt="pics" />
+            <figure className="justify-center">
+              <img  src={n.urlToImage} alt="pics" />
             </figure>
 
-            <h2 className="card-title">{n.title}</h2>
+            <h2 className="card-title justify-center">{n.title}</h2>
             <p>{n.content}</p>
 
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+            <div className="card-actions justify-center">
+              <button>Buy Now</button>
             </div>
           </div>
         ))}
