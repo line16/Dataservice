@@ -20,6 +20,8 @@ import PostsCreate from './views/jsonPlaceholder/PostsCreate';
 import TopHeadlines from './views/NewsApi/TopHeadlines';
 import NewsApi from "./views/NewsApi/Everything";
 import Hobbies from './views/RapidApi/hobbies';
+import CurrentWeather from './views/OpenWeather/currentWeather';
+import CurrentWeatherCopy from './views/OpenWeather/currentWeatherCopy';
 
 
 function App () {
@@ -41,7 +43,9 @@ function App () {
           <Route path="postAdmin" element={ <PostsAdmin /> } />
           <Route path="postedit/:postID" element={ <PostEdit /> } />
           <Route path="PostsCreate" element={ <PostsCreate /> } />
-
+          {/* currentWeather */}
+          <Route path="currentWeather" element={ <CurrentWeather /> } />
+          <Route path="currentWeatherCopy" element={ <CurrentWeatherCopy /> } />
           {/* SWAPI */}
           <Route path="star" element={ <Star /> } />
           {/* NEWS API */}
