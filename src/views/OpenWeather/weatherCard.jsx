@@ -1,6 +1,6 @@
 import React from 'react'
 
-const weatherCard = () => {
+const weatherCard = ({data}) => {
   return (
     <div>
          <article className="card w-98 shadow-xl py-4 text-black">

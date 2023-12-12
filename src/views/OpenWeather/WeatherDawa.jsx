@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import Loader from "../../components/Loader";
 import useRequestData from "../../hooks/useRequestData";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import LeafletMap from "./LeafletMap";
 
-// import json data og map alle postnummerne
-import postNR from "./postnumre.json";
 
-const currentWeatherCopy = () => {
+const WeatherDawa = () => {
   //https://api.openweathermap.org/data/2.5/weather?zip=8500,dk&units=metric&appid=76799082ae1442b626cf882793217343
 
   const { data, isLoading, error, makeRequest } = useRequestData();
+   const {makeRequest: makeRequestDawa, isLoading: isLoadingDawa, data: dataDawa, error: errorDawa} = useRequestData()
+  
+
 
   const [zip, setZip] = useState("4130");
   const [valid, setValid] = useState(true);
@@ -32,11 +34,17 @@ const currentWeatherCopy = () => {
     if (e.key === "Enter" || e.code === "Enter") searchZipCode();
   };
 
+  useEffect(() => {
+    makeRequestDawa("https://api.dataforsyningen.dk/postnumre/autocomplete?q="+ zip)
+  
+  }, [zip])
+  
+
   return (
     <div className="mx-auto">
       {/* // udtræk vejret, tempo, vindhastighed/-retning, sol op/ned osv.. */}
       <h1 className="text-black text-lg">
-        vejret for en udvalgt by via postnummer
+        vejret fra udvslgt by - Dawa 
       </h1>
 
       {isLoading && <Loader />}
@@ -52,14 +60,13 @@ const currentWeatherCopy = () => {
         className="m-2 bg-white text-black rounded"
         required
         pattern="{0-9}{4}"
-        maxLength={4}
         list="listPostNr"
       />
 
       <datalist id="listPostNr">
         {
-          postNR.map(p => 
-          <option value={p.postnr} key={p.postnr}>{p.postnr}{p.by}</option>
+            dataDawa?.map(d => 
+          <option value={d.postnummer.nr} key={d.postnummer.nr}>{d.tekst}{d.by}</option>
           )
         }
       </datalist>
@@ -95,8 +102,10 @@ const currentWeatherCopy = () => {
           </div>
         </article>
       )}
+
+
     </div>
   );
 };
 
-export default currentWeatherCopy;
+export default WeatherDawa;

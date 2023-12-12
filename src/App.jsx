@@ -22,6 +22,8 @@ import NewsApi from "./views/NewsApi/Everything";
 import Hobbies from './views/RapidApi/hobbies';
 import CurrentWeather from './views/OpenWeather/currentWeather';
 import CurrentWeatherCopy from './views/OpenWeather/currentWeatherCopy';
+import WeatherDawa from "./views/OpenWeather/WeatherDawa";
+import WeatherMap from './views/OpenWeather/WeatherMap';
 
 
 function App () {
@@ -46,6 +48,8 @@ function App () {
           {/* currentWeather */}
           <Route path="currentWeather" element={ <CurrentWeather /> } />
           <Route path="currentWeatherCopy" element={ <CurrentWeatherCopy /> } />
+          <Route path="weatherDawa" element={ <WeatherDawa /> } />
+          <Route path="weatherMap" element={ <WeatherMap /> } />
           {/* SWAPI */}
           <Route path="star" element={ <Star /> } />
           {/* NEWS API */}
