@@ -20,9 +20,9 @@ const PostEdit = () => {
     makeRequest("https://jsonplaceholder.typicode.com/posts/" + postID)
   }, []);
 
-  useEffect(() => {
+  // useEffect(() => {
     
-  }, [])
+  // }, [])
   
   
 // DER ER KLIKKET PÅ SUBMIT - SEND DATA TIL API

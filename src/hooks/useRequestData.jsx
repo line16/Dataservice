@@ -20,16 +20,16 @@ const useRequestData = () => {
            response = await axios.get(url,{headers:headers, params: params});
           break;
           case "POST":
-            response = await axios.post(url, bodydata);
+            response = await axios.post(url, bodydata, {headers:headers, params: params});
           break;
           case "PUT":
-            response = await axios.put(url, bodydata);
+            response = await axios.put(url, bodydata, {headers:headers, params: params});
           break;
           case "PATCH":
-            response = await axios.patch(url, bodydata);
+            response = await axios.patch(url, bodydata, {headers:headers, params: params});
           break;
           case "DELETE":
-            response = await axios.delete(url);
+            response = await axios.delete(url, {headers:headers, params: params});
           break;
       
         default:

@@ -25,7 +25,7 @@ const LeafletMap = () => {
    
 
   return (
-    <div id="mapContainerLeaf" style={{ width: "500px", height: "500px" }}>
+    <div id="mapContainerLeaf" style={{ width: "400px", height: "300px" }}>
       kortet Loader...
     </div>
   );

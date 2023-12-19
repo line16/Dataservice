@@ -46,7 +46,7 @@ const WeatherMap = () => {
   return (
     <div className="mx-auto">
       {/* // udtræk vejret, tempo, vindhastighed/-retning, sol op/ned osv.. */}
-      <h1 className="text-black text-lg">vejret fra udvslgt by - Dawa</h1>
+      <h1 className="text-black text-lg">vejret fra udvalgt by - Leaflet</h1>
 
       {isLoading && <Loader />}
       {error && <h2> error</h2>}
@@ -105,12 +105,12 @@ const WeatherMap = () => {
               </li>
             </ul>
           </div>
+
+          <div className="flex m-auto">
+          <LeafletMap />
+          </div>
         </article>
       )}
-
-<LeafletMap />
-
-    
     </div>
   );
 };

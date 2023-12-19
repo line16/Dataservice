@@ -24,6 +24,10 @@ import CurrentWeather from './views/OpenWeather/currentWeather';
 import CurrentWeatherCopy from './views/OpenWeather/currentWeatherCopy';
 import WeatherDawa from "./views/OpenWeather/WeatherDawa";
 import WeatherMap from './views/OpenWeather/WeatherMap';
+import WeatherPollution from './views/OpenWeather/weatherPollution';
+import Shoppinglist from './views/AirtableAPI/Shoppinglist';
+import ShoppingEDIT from './views/AirtableAPI/ShoppingEDIT';
+import ShoppingCreate from './views/AirtableAPI/shoppingCreate';
 
 
 function App () {
@@ -50,6 +54,11 @@ function App () {
           <Route path="currentWeatherCopy" element={ <CurrentWeatherCopy /> } />
           <Route path="weatherDawa" element={ <WeatherDawa /> } />
           <Route path="weatherMap" element={ <WeatherMap /> } />
+          <Route path="weatherPollution" element={ < WeatherPollution/> } />
+          {/* airtable API */}
+          <Route path="shoppinglist" element={<Shoppinglist/>}/>
+          <Route path="shoppingEDIT" element={<ShoppingEDIT/>}/>
+          <Route path="shoppingCreate" element={<ShoppingCreate/>}/>
           {/* SWAPI */}
           <Route path="star" element={ <Star /> } />
           {/* NEWS API */}

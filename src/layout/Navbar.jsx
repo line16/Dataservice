@@ -5,240 +5,73 @@ import "./NavBar.css";
 const Navbar = () => {
   return (
     <nav className="navbar text-white">
+      <div className="navbar-start">
+        <a className="btn btn-ghost text-xl">LOGO A/S</a>
+      </div>
       <div className="navbar">
-        <div className="navbar-start">
-          {/* <div className="dropdown">
-                <ul
-                  tabIndex={0}
-                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-                >
-                  <li>
-                    <a>Item 1</a>
-                  </li>
-                  <li>
-                    <a>Parent</a>
-                    <ul className="p-2">
-                      <li>
-                        <a>Submenu 1</a>
-                      </li>
-                      <li>
-                        <a>Submenu 2</a>
-                      </li>
-                      <li>
-                        <a>Submenu 2</a>
-                      </li>
-                      <li>
-                        <a>Submenu 2</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a>Item 3</a>
-                  </li>
-                </ul>
-              </div> */}
-          <a className="btn btn-ghost text-xl">LOGO A/S</a>
+        <div className="dropdown">
+          <button className="dropbtn">basic</button>
+          <div className="dropdownContent">
+              <NavLink className="Link" to="/">Home</NavLink>
+              <NavLink className="Link" to="/about">Om os</NavLink>
+              <NavLink className="Link" to="/contact">Kontakt</NavLink>
+          </div>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <details>
-                <summary>home</summary>
-                <ul className="p-2">
-                  <li>
-                    <NavLink className="Link" to="/">
-                      Home
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="Link" to="/about">
-                      Om os
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="Link" to="/contact">
-                      Kontakt
-                    </NavLink>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>jsonPlaceholder</summary>
-                <ul className="p-2">
-                  <li>
-                    <NavLink className="Link" to="/posts">
-                      jsonplaceholder
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="Link" to="/todo">
-                      TODO
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="Link" to="/postAdmin">
-                      postAdmin
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="Link" to="/photo">
-                      Photo
-                    </NavLink>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>SWAPI</summary>
-                <ul className="p-2">
-                  <li>
-                    <NavLink className="Link" to="/starships">
-                      starships
-                    </NavLink>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>NEWS api</summary>
-                <ul className="p-2">
-                  <li>
-                    <NavLink className="Link" to="/NewsHeadlines">
-                      NewsAPi TopHeadlines
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="Link" to="/NewsApi">
-                      NewsAPI
-                    </NavLink>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>RAPID-API</summary>
-                <ul className="p-2">
-                  <li>
-                    <NavLink className="Link" to="/Hobbies">
-                      Hobbies
-                    </NavLink>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>OpenWeather</summary>
-                <ul className="p-2">
-                  <li>
-                    <NavLink className="Link" to="/currentWeather">
-                      current weather
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="Link" to="/currentWeatherCopy">
-                      current weather 2
-                    </NavLink>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <NavLink className="Link" to="/weatherDawa">
-                Weather Dawa
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className="Link" to="/weatherMap">
-                Weather Map
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className="Link" to="/admin">
-                ADMIN
-              </NavLink>
-            </li>
-          </ul>
+        {/* JOSN placeholder */}
+        <div className="dropdown">
+          <button className="dropbtn">Json Placeholder</button>
+          <div className="dropdownContent">
+          <NavLink className="Link" to="/posts">jsonplaceholder</NavLink>
+          <NavLink className="Link" to="/todo">TODO</NavLink>
+          <NavLink className="Link" to="/postAdmin">postAdmin</NavLink>
+          <NavLink className="Link" to="/photo">Photo</NavLink>
+          </div>
         </div>
+        {/* SWAPI  */}
+        <div className="dropdown">
+          <button className="dropbtn">Swapi</button>
+          <div className="dropdownContent">
+          <NavLink className="Link" to="/starships">starships</NavLink>
+          </div>
+        </div>
+        {/* NEWS API */}
+        <div className="dropdown">
+          <button className="dropbtn">News Api</button>
+          <div className="dropdownContent">
+          <NavLink className="Link" to="/NewsHeadlines">NewsAPi TopHeadlines</NavLink>
+          <NavLink className="Link" to="/NewsApi">NewsAPI</NavLink>
+          </div>
+        </div>
+          {/* AIRTABLE API */}
+          <div className="dropdown">
+          <button className="dropbtn">Airtable</button>
+          <div className="dropdownContent">
+          <NavLink className="Link" to="/Shoppinglist">shoppinglist</NavLink>
+          </div>
+        </div>
+        {/*RAPID API  */}
+        <div className="dropdown">
+          <button className="dropbtn">Rapid Api</button>
+          <div className="dropdownContent">
+          <NavLink className="Link" to="/Hobbies">Hobbies</NavLink>
+          </div>
+        </div> 
+      {/* OPEN WEATHER API */}
+      <div className="dropdown">
+          <button className="dropbtn">Open Weather Api</button>
+          <div className="dropdownContent">
+          <NavLink className="Link" to="/currentWeather">current weather</NavLink>
+          <NavLink className="Link" to="/currentWeatherCopy">current weather 2</NavLink>
+          <NavLink className="Link" to="/weatherDawa">Weather Dawa</NavLink>
+          <NavLink className="Link" to="/weatherMap">Weather Map</NavLink>
+          <NavLink className="Link" to="/weatherPollution">Weather poll</NavLink>
+          
+          </div>
+        </div> 
+        <NavLink className="Link" to="/admin">ADMIN</NavLink>
       </div>
     </nav>
   );
 };
 
 export default Navbar;
-
-{
-  /* <div>
-          <a href="#">LOGO A/S</a>
-        </div> */
-}
-{
-  /* NEWS API */
-}
-{
-  /* <NavLink className="Link" to="/NewsHeadlines">
-            NewsAPi TopHeadlines
-          </NavLink> */
-}
-{
-  /* JSON PLACEHOLDER */
-}
-{
-  /* <NavLink className="Link" to="/posts">
-            jsonplaceholder
-          </NavLink>
-          <NavLink className="Link" to="/photo">
-            Photo
-          </NavLink>
-          <NavLink className="Link" to="/todo">
-            TODO
-          </NavLink>
-          <NavLink className="Link" to="/postAdmin">
-            postAdmin
-          </NavLink> */
-}
-{
-  /* OPEN WEATHER */
-}
-{
-  /* <NavLink className="Link" to="/currentWeather">
-            current weather
-          </NavLink> */
-}
-{
-  /* SWAPI */
-}
-{
-  /* <NavLink className="Link" to="/starships">
-            starships
-          </NavLink> */
-}
-{
-  /* NEWSAPI */
-}
-{
-  /* <NavLink className="Link" to="/NewsApi">
-            NewsAPI
-          </NavLink> */
-}
-{
-  /* RAPIDAPI */
-}
-{
-  /* <NavLink className="Link" to="/Hobbies">
-            Hobbies
-          </NavLink> */
-}
-{
-  /* ADMIN */
-}
-{
-  /* <NavLink className="Link" to="/admin">
-            ADMIN
-          </NavLink> */
-}

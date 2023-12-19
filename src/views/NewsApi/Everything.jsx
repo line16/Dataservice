@@ -53,7 +53,7 @@ const Everything = () => {
         <option value="en">engelsk</option>
       </select>
 
-      {/* dere er data */}
+      {/* der er data */}
       {data &&
         data.articles.map((n) => (
           <div
