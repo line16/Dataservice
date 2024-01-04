@@ -10,13 +10,14 @@ import { MdAdd } from "react-icons/md";
 const Shoppinglist = () => {
   const { data, isLoading, error, makeRequest } = useRequestData();
 
+  const {makeRequest: makeRequestDelete, isLoading: isLoadingDelete, data: dataDelete, error: errorDelete} = useRequestData();
 
   useEffect(() => {
     makeRequest("https://api.airtable.com/v0/appxiAugddwTUbYy1/Projects", "GET", null, { Authorization: "Bearer " + "patGG88HDoec8o0UT.47590412b17fcb9a081349bde252153acacde63192b1388649186c1146bc4294", });
   }, []);
 
   const handleDelete = (Item, Note) => {
-    if (window.confirm("du sletter" + Item)) {
+    if (window.confirm("du sletter" + Item + "?")) {
       makeRequestDelete(
         "https://api.airtable.com/v0/appxiAugddwTUbYy1/Projects" + postID,
         "DELETE", null, { Authorization: "Bearer " + "patGG88HDoec8o0UT.47590412b17fcb9a081349bde252153acacde63192b1388649186c1146bc4294", }
@@ -48,6 +49,7 @@ const Shoppinglist = () => {
             <th>SLET</th>
           </tr>
         </thead>
+
         <tbody>
           {data &&
             data.records.map((p) => (

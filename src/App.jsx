@@ -57,7 +57,7 @@ function App () {
           <Route path="weatherPollution" element={ < WeatherPollution/> } />
           {/* airtable API */}
           <Route path="shoppinglist" element={<Shoppinglist/>}/>
-          <Route path="shoppingEDIT" element={<ShoppingEDIT/>}/>
+          <Route path="shoppingEDIT/:ID" element={<ShoppingEDIT/>}/>
           <Route path="shoppingCreate" element={<ShoppingCreate/>}/>
           {/* SWAPI */}
           <Route path="star" element={ <Star /> } />
