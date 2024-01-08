@@ -34,6 +34,15 @@ const Navbar = () => {
           <NavLink className="Link" to="/starships">starships</NavLink>
           </div>
         </div>
+           {/*  MONGO  */}
+           <div className="dropdown">
+          <button className="dropbtn">Mongo</button>
+          <div className="dropdownContent">
+          <NavLink className="Link" to="/Mongotodo">Mongo To do</NavLink>
+          <NavLink className="Link" to="/MongoCreatetodo">Mongo create</NavLink>
+          <NavLink className="Link" to="/MongoAdmin">Mongo Admin</NavLink>
+          </div>
+        </div>
         {/* NEWS API */}
         <div className="dropdown">
           <button className="dropbtn">News Api</button>

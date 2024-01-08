@@ -14,16 +14,16 @@ const Todo = () => {
 
   return (
     <div>
-      <h1 className={"text-center"}>JSon Placeholder - TODO</h1>
+      <h1 className="text-center font-black">JSon Placeholder - TODO</h1>
 
       {isLoading && <Loader />}
       {error && <h2> error</h2>}
 
-      <button onClick={() => setIsComplete(true)}>vis alle udførte</button>
-      <button onClick={() => setIsComplete(false)}>
+      <button onClick={() => setIsComplete(true)} className="btn m-2">vis alle udførte</button>
+      <button onClick={() => setIsComplete(false)} className="btn m-2">
         vis alle afventende todos
       </button>
-      <button onClick={() => setIsComplete(null)}>vis alle todos</button>
+      <button onClick={() => setIsComplete(null)} className="btn m-2">vis alle todos</button>
 
       <div>
         {data &&
